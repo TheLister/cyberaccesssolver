@@ -15,10 +15,10 @@
 
 
 
-def solve_using_first_buffer(matrix, mine_v1_seq, mine_v2_seq, mine_v3_seq)
+def solve_using_first_buffer(matrix, mine_v1_seq, mine_v2_seq, mine_v3_seq):
+    print("solving using first buffer")
 
 
-
-def solve_wasting_first_buffer(matrix, mine_v1_seq, mine_v2_seq, mine_v3_seq)
-
+def solve_wasting_first_buffer(matrix, mine_v1_seq, mine_v2_seq, mine_v3_seq):
+    print("solving wasting first buffer")
 
