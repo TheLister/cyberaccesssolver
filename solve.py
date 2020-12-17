@@ -19,7 +19,6 @@ mine_v1 = ['55','1c','e9']
 mine_v2 = ['bd','55','1c']
 mine_v3 = ['e9','e9','1c']
 
-
 # ALL KNOWN SOLUTIONS
 
 # Solves only Minev1
@@ -40,35 +39,18 @@ mine_v3 = ['e9','e9','1c']
 # [0,20,23,8]
 # [0,20,23,3]
 
-
-
 #indexes of all matrices in a given column
-
 column0idx = [0,5,10,15,20]
 column1idx = [1,6,11,16,21]
 column2idx = [2,7,12,17,22]
 column3idx = [3,8,13,18,23]
 column4idx = [4,9,14,19,24]
 
-mine_v1_step1 = []
-for xidx, xval in enumerate(matrix[0:5]): #range high must be last + 1
-        if xval == mine_v1[0]:
-            mine_v1_step1.append(xidx)
-
-print("")
-print("columns that will work for first mine_v1 variable")
-print(mine_v1_step1)
-print("")
+mine_v1_step1 = solve_step_1(matrix, mine_v1)
 
 mine_v1_step2 = solve_step_2(matrix, mine_v1_step1, mine_v1)
-
-
-print("sequences that will work for second mine_v1 variable")
-print(mine_v1_step2)
-print("")
-
 
 for m2idx, m2val in enumerate(mine_v1_step2):
     for rowpeer in get_row_peers(matrix, m2val[1]):
         if rowpeer[1] == mine_v1[2]:
-          print("SOLUTION " + str(m2val[0]) + " " + str(m2val[1]) + " " + str(rowpeer[0]))
+          print("MINEV1 SOLUTION " + str(m2val[0]) + " " + str(m2val[1]) + " " + str(rowpeer[0]))

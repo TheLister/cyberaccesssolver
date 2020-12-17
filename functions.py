@@ -50,6 +50,12 @@ def get_row_peers(matrix, matrix_index): #returns indexes of all matrix row memb
         row_peers.append([x,matrix[x]])
       return row_peers
 
+def solve_step_1(matrix, mine_v1):
+  mine_v1_step1 = []
+  for xidx, xval in enumerate(matrix[0:5]): #range high must be last + 1
+    if xval == mine_v1[0]:
+        mine_v1_step1.append(xidx)
+  return mine_v1_step1
 
 def solve_step_2(matrix, mine_v1_step1, mine_v1):
     mine_v1_step2 = []
