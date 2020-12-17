@@ -46,6 +46,10 @@ column2idx = [2,7,12,17,22]
 column3idx = [3,8,13,18,23]
 column4idx = [4,9,14,19,24]
 
+
+
+########## Datamine V1
+
 mine_v1_step1 = solve_step_1(matrix, mine_v1)
 
 mine_v1_step2 = solve_step_2(matrix, mine_v1_step1, mine_v1)
@@ -53,4 +57,34 @@ mine_v1_step2 = solve_step_2(matrix, mine_v1_step1, mine_v1)
 for m2idx, m2val in enumerate(mine_v1_step2):
     for rowpeer in get_row_peers(matrix, m2val[1]):
         if rowpeer[1] == mine_v1[2]:
-          print("MINEV1 SOLUTION " + str(m2val[0]) + " " + str(m2val[1]) + " " + str(rowpeer[0]))
+          print("Datamine V1 SOLUTION " + str(m2val[0]) + " " + str(m2val[1]) + " " + str(rowpeer[0]))
+
+
+########## Datamine V2
+
+mine_v2_step1 = solve_step_1(matrix, mine_v2)
+
+mine_v2_step2 = solve_step_2(matrix, mine_v2_step1, mine_v2)
+
+for m2idx, m2val in enumerate(mine_v2_step2):
+    for rowpeer in get_row_peers(matrix, m2val[1]):
+        if rowpeer[1] == mine_v2[2]:
+          print("Datamine V2 SOLUTION " + str(m2val[0]) + " " + str(m2val[1]) + " " + str(rowpeer[0]))
+
+
+########### Datamine V3
+
+mine_v3_step1 = solve_step_1(matrix, mine_v3)
+
+mine_v3_step2 = solve_step_2(matrix, mine_v3_step1, mine_v3)
+
+for m2idx, m2val in enumerate(mine_v3_step2):
+    for rowpeer in get_row_peers(matrix, m2val[1]):
+        if rowpeer[1] == mine_v2[2]:
+          print("Datamine V3 SOLUTION " + str(m2val[0]) + " " + str(m2val[1]) + " " + str(rowpeer[0]))
+
+
+
+
+
+
