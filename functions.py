@@ -65,12 +65,9 @@ def solve_step_2(matrix, mine_v1_step1, mine_v1):
             for colidx in column0idx: #column0idx list of matrix indexes for current column
                 #colidx is the matrix index for the current column item (0,5,10,15,20)
                 if matrix[colidx] == mine_v1[1]:
-                    # print("matrix " + str(colidx) + " matches second mine_v1 item")
-                    #build sequence for this solution
                     seq1 = []
                     seq1.append(m1val)
                     seq1.append(colidx)
-                    # print(seq1)
                     #write the sequence to the list of possible solutions
                     mine_v1_step2.append(seq1)
         if m1val == 1:
@@ -83,8 +80,6 @@ def solve_step_2(matrix, mine_v1_step1, mine_v1):
                     seq1 = []
                     seq1.append(m1val)
                     seq1.append(colidx)
-                    # print(seq1)
-                    #write the sequence to the list of possible solutions
                     mine_v1_step2.append(seq1)
         if m1val == 2:
             # print("looking for second mine_v1 string in column " + str(m1val))
@@ -113,16 +108,13 @@ def solve_step_2(matrix, mine_v1_step1, mine_v1):
                     #write the sequence to the list of possible solutions
                     mine_v1_step2.append(seq1)
         if m1val == 4:
-            # print("looking for second mine_v1 string in column " + str(m1val))
             for colidx in column4idx: #column0idx list of matrix indexes for current column
                 #colidx is the matrix index for the current column item (0,5,10,15,20)
                 if matrix[colidx] == mine_v1[1]:
-                    # print("matrix " + str(colidx) + " matches second mine_v1 item")
                     #build sequence for this solution
                     seq1 = []
                     seq1.append(m1val)
                     seq1.append(colidx)
-                    # print(seq1)
                     #write the sequence to the list of possible solutions
                     mine_v1_step2.append(seq1)
     return mine_v1_step2
